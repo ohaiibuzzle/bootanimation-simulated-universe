@@ -7,6 +7,7 @@ bootanimzip:
 	$(MAKE) -C bootanimation
 
 magiskzip: bootanimzip
+	mkdir -p magisk/system/product/media/
 	cp bootanimation/bootanimation.zip magisk/system/product/media/bootanimation.zip
 	$(MAKE) -C magisk
 	mv magisk/magisk.zip bootanimation-module.zip
